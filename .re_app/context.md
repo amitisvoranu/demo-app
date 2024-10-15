@@ -1,0 +1,1 @@
+As CISO I want that all deployment manifests that are being generated are running in their own isolated network through Kubernetes policy
