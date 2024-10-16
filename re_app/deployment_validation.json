@@ -1,0 +1,70 @@
+{
+  "namespace": "re-app-eb132e",
+  "pods": [
+    {
+      "name": "python-flask-hello-world-6b7fb9f9f4-95gb2",
+      "app_name": "python-flask-hello-world",
+      "phase": "Pending",
+      "condition_type": "PodReadyToStartContainers",
+      "containers": [
+        {
+          "name": "python-flask-hello-world",
+          "image": "ghcr.io/amitisvoranu/demo-app/python-flask-hello-world:re-app-eb132e",
+          "state": {
+            "running": null,
+            "terminated": null,
+            "waiting": {
+              "message": "Back-off pulling image \"ghcr.io/amitisvoranu/demo-app/python-flask-hello-world:re-app-eb132e\"",
+              "reason": "ImagePullBackOff"
+            }
+          },
+          "restarts": 0,
+          "events": [
+            "default-scheduler - Scheduled: Successfully assigned re-app-eb132e/python-flask-hello-world-6b7fb9f9f4-95gb2 to minikube",
+            "kubelet - Pulling: Pulling image \"ghcr.io/amitisvoranu/demo-app/python-flask-hello-world:re-app-eb132e\"",
+            "kubelet - Failed: Failed to pull image \"ghcr.io/amitisvoranu/demo-app/python-flask-hello-world:re-app-eb132e\": Error response from daemon: manifest unknown",
+            "kubelet - Failed: Error: ErrImagePull",
+            "kubelet - SandboxChanged: Pod sandbox changed, it will be killed and re-created.",
+            "kubelet - BackOff: Back-off pulling image \"ghcr.io/amitisvoranu/demo-app/python-flask-hello-world:re-app-eb132e\"",
+            "kubelet - Failed: Error: ImagePullBackOff"
+          ],
+          "logs": []
+        }
+      ]
+    },
+    {
+      "name": "spring-boot-helloworld-699d8d785c-7qdxc",
+      "app_name": "spring-boot-helloworld",
+      "phase": "Pending",
+      "condition_type": "PodReadyToStartContainers",
+      "containers": [
+        {
+          "name": "spring-boot-helloworld",
+          "image": "ghcr.io/amitisvoranu/demo-app/spring-boot-helloworld:re-app-eb132e",
+          "state": {
+            "running": null,
+            "terminated": null,
+            "waiting": {
+              "message": "Back-off pulling image \"ghcr.io/amitisvoranu/demo-app/spring-boot-helloworld:re-app-eb132e\"",
+              "reason": "ImagePullBackOff"
+            }
+          },
+          "restarts": 0,
+          "events": [
+            "default-scheduler - Scheduled: Successfully assigned re-app-eb132e/spring-boot-helloworld-699d8d785c-7qdxc to minikube",
+            "kubelet - Pulling: Pulling image \"ghcr.io/amitisvoranu/demo-app/spring-boot-helloworld:re-app-eb132e\"",
+            "kubelet - Failed: Failed to pull image \"ghcr.io/amitisvoranu/demo-app/spring-boot-helloworld:re-app-eb132e\": Error response from daemon: manifest unknown",
+            "kubelet - Failed: Error: ErrImagePull",
+            "kubelet - SandboxChanged: Pod sandbox changed, it will be killed and re-created.",
+            "kubelet - BackOff: Back-off pulling image \"ghcr.io/amitisvoranu/demo-app/spring-boot-helloworld:re-app-eb132e\"",
+            "kubelet - Failed: Error: ImagePullBackOff"
+          ],
+          "logs": []
+        }
+      ]
+    }
+  ],
+  "exception": null,
+  "start": 203393.639214015,
+  "end": 203398.72320232
+}
