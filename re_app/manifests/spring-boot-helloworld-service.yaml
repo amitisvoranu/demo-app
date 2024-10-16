@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app.kubernetes.io/name: spring-boot-helloworld
+    app.kubernetes.io/part-of: demo-app
+  name: spring-boot-helloworld
+spec:
+  ports:
+  - name: port-8080
+    port: 8080
+    targetPort: 8080
+  selector:
+    move2kube.konveyor.io/service: spring-boot-helloworld
+  type: ClusterIP
+status: {}
