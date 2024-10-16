@@ -67,4 +67,41 @@
   "exception": null,
   "start": 204523.574932235,
   "end": 204528.650687313
+}{
+  "namespace": "re-app-bd7cd5",
+  "pods": [
+    {
+      "name": "spring-boot-helloworld-5b9b9bdc74-592ff",
+      "app_name": "spring-boot-helloworld",
+      "phase": "Pending",
+      "condition_type": "PodReadyToStartContainers",
+      "containers": [
+        {
+          "name": "spring-boot-helloworld",
+          "image": "ghcr.io/amitisvoranu/demo-app/spring-boot-helloworld:re-app-bd7cd5",
+          "state": {
+            "running": null,
+            "terminated": null,
+            "waiting": {
+              "message": "Error response from daemon: manifest unknown",
+              "reason": "ErrImagePull"
+            }
+          },
+          "restarts": 0,
+          "events": [
+            "default-scheduler - Scheduled: Successfully assigned re-app-bd7cd5/spring-boot-helloworld-5b9b9bdc74-592ff to minikube",
+            "kubelet - Pulling: Pulling image \"ghcr.io/amitisvoranu/demo-app/spring-boot-helloworld:re-app-bd7cd5\"",
+            "kubelet - Failed: Failed to pull image \"ghcr.io/amitisvoranu/demo-app/spring-boot-helloworld:re-app-bd7cd5\": Error response from daemon: manifest unknown",
+            "kubelet - Failed: Error: ErrImagePull",
+            "kubelet - BackOff: Back-off pulling image \"ghcr.io/amitisvoranu/demo-app/spring-boot-helloworld:re-app-bd7cd5\"",
+            "kubelet - Failed: Error: ImagePullBackOff"
+          ],
+          "logs": []
+        }
+      ]
+    }
+  ],
+  "exception": null,
+  "start": 204578.963114838,
+  "end": 204584.00203986
 }
