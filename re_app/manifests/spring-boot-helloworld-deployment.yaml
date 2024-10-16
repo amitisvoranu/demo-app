@@ -20,7 +20,19 @@ spec:
       containers:
       - image: ghcr.io/amitisvoranu/demo-app/spring-boot-helloworld:re-app-eb132e
         imagePullPolicy: Always
+        livenessProbe:
+          initialDelaySeconds: 30
+          periodSeconds: 10
+          tcpSocket:
+            port: 8080
         name: spring-boot-helloworld
         ports:
         - containerPort: 8080
+        readinessProbe:
+          initialDelaySeconds: 30
+          periodSeconds: 10
+          tcpSocket:
+            port: 8080
+      imagePullSecrets:
+      - name: pull-secret
       restartPolicy: Always
