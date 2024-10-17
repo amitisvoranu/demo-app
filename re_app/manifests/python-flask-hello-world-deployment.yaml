@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app.kubernetes.io/name: python-flask-hello-world
+    app.kubernetes.io/part-of: demo-app
+  name: python-flask-hello-world
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: python-flask-hello-world
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: python-flask-hello-world
+        app.kubernetes.io/part-of: demo-app
+      name: python-flask-hello-world
+    spec:
+      containers:
+      - image: ghcr.io/amitisvoranu/demo-app/python-flask-hello-world:re-app-355ff0
+        imagePullPolicy: Always
+        name: python-flask-hello-world
+        ports:
+        - containerPort: 8080
+      restartPolicy: Always
