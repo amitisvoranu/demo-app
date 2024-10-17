@@ -20,7 +20,19 @@ spec:
       containers:
       - image: ghcr.io/amitisvoranu/demo-app/python-flask-hello-world:re-app-2b29cd
         imagePullPolicy: Always
+        livenessProbe:
+          initialDelaySeconds: 30
+          periodSeconds: 10
+          tcpSocket:
+            port: 5000
         name: python-flask-hello-world
         ports:
-        - containerPort: 8080
+        - containerPort: 5000
+        readinessProbe:
+          initialDelaySeconds: 30
+          periodSeconds: 10
+          tcpSocket:
+            port: 5000
+      imagePullSecrets:
+      - name: pull-secret
       restartPolicy: Always
