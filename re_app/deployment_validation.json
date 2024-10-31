@@ -127,4 +127,99 @@
   "exception": null,
   "start": 76650.201941732,
   "end": 76702.009789763
+}{
+  "namespace": "re-app-c3627a",
+  "pods": [
+    {
+      "name": "python-flask-hello-world-6bcd64c6d6-72rxl",
+      "app_name": "python-flask-hello-world",
+      "phase": "Running",
+      "condition_type": "Ready",
+      "events": [
+        "default-scheduler - Scheduled: Successfully assigned re-app-c3627a/python-flask-hello-world-6bcd64c6d6-72rxl to minikube",
+        "kubelet - Pulling: Pulling image \"ghcr.io/amitisvoranu/demo-app/python-flask-hello-world:re-app-c3627a\"",
+        "kubelet - Pulled: Successfully pulled image \"ghcr.io/amitisvoranu/demo-app/python-flask-hello-world:re-app-c3627a\" in 824ms (824ms including waiting). Image size: 146042428 bytes.",
+        "kubelet - Created: Created container python-flask-hello-world",
+        "kubelet - Started: Started container python-flask-hello-world"
+      ],
+      "containers": [
+        {
+          "name": "python-flask-hello-world",
+          "image": "ghcr.io/amitisvoranu/demo-app/python-flask-hello-world:re-app-c3627a",
+          "state": {
+            "running": {
+              "started_at": "2024-10-31T10:13:47Z"
+            },
+            "terminated": null,
+            "waiting": null
+          },
+          "restarts": 0,
+          "logs": [
+            " * Debug mode: off",
+            "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m",
+            " * Running on all addresses (0.0.0.0)",
+            " * Running on http://127.0.0.1:5000",
+            " * Running on http://10.244.0.174:5000",
+            "\u001b[33mPress CTRL+C to quit\u001b[0m",
+            ""
+          ]
+        }
+      ],
+      "init_containers": []
+    },
+    {
+      "name": "spring-boot-helloworld-86dfc7665c-ntgqr",
+      "app_name": "spring-boot-helloworld",
+      "phase": "Running",
+      "condition_type": "Ready",
+      "events": [
+        "default-scheduler - Scheduled: Successfully assigned re-app-c3627a/spring-boot-helloworld-86dfc7665c-ntgqr to minikube",
+        "kubelet - Pulling: Pulling image \"ghcr.io/amitisvoranu/demo-app/spring-boot-helloworld:re-app-c3627a\"",
+        "kubelet - Pulled: Successfully pulled image \"ghcr.io/amitisvoranu/demo-app/spring-boot-helloworld:re-app-c3627a\" in 709ms (1.451s including waiting). Image size: 502970488 bytes.",
+        "kubelet - Created: Created container spring-boot-helloworld",
+        "kubelet - Started: Started container spring-boot-helloworld",
+        "kubelet - Unhealthy: Readiness probe failed: dial tcp 10.244.0.175:8080: connect: connection refused",
+        "kubelet - Unhealthy: Liveness probe failed: dial tcp 10.244.0.175:8080: connect: connection refused"
+      ],
+      "containers": [
+        {
+          "name": "spring-boot-helloworld",
+          "image": "ghcr.io/amitisvoranu/demo-app/spring-boot-helloworld:re-app-c3627a",
+          "state": {
+            "running": {
+              "started_at": "2024-10-31T10:13:48Z"
+            },
+            "terminated": null,
+            "waiting": null
+          },
+          "restarts": 0,
+          "logs": [
+            "",
+            "  .   ____          _            __ _ _",
+            " /\\\\ / ___'_ __ _ _(_)_ __  __ _ \\ \\ \\ \\",
+            "( ( )\\___ | '_ | '_| | '_ \\/ _` | \\ \\ \\ \\",
+            " \\\\/  ___)| |_)| | | | | || (_| |  ) ) ) )",
+            "  '  |____| .__|_| |_|_| |_\\__, | / / / /",
+            " =========|_|==============|___/=/_/_/_/",
+            " :: Spring Boot ::                (v3.0.0)",
+            "",
+            "2024-10-31T10:14:00.315Z  INFO 1 --- [           main] com.neo.Application                      : Starting Application v1.0.0-SNAPSHOT using Java 17.0.13 with PID 1 (/spring-boot-helloworld-1.0.0-SNAPSHOT.jar started by root in /)",
+            "2024-10-31T10:14:00.411Z  INFO 1 --- [           main] com.neo.Application                      : No active profile set, falling back to 1 default profile: \"default\"",
+            "2024-10-31T10:14:13.769Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)",
+            "2024-10-31T10:14:14.007Z  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]",
+            "2024-10-31T10:14:14.008Z  INFO 1 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.1]",
+            "2024-10-31T10:14:16.263Z  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext",
+            "2024-10-31T10:14:16.271Z  INFO 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 15103 ms",
+            "2024-10-31T10:14:23.307Z  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''",
+            "2024-10-31T10:14:23.560Z  INFO 1 --- [           main] com.neo.Application                      : Started Application in 29.398 seconds (process running for 35.543)",
+            ""
+          ]
+        }
+      ],
+      "init_containers": []
+    }
+  ],
+  "exception": null,
+  "start": 76764.141863838,
+  "end": 76805.040624645
 }
