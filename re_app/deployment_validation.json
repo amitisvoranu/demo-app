@@ -1,0 +1,130 @@
+{
+  "namespace": "re-app-c3627a",
+  "pods": [
+    {
+      "name": "python-flask-hello-world-6bcd64c6d6-2gwjc",
+      "app_name": "python-flask-hello-world",
+      "phase": "Running",
+      "condition_type": "Ready",
+      "events": [
+        "default-scheduler - Scheduled: Successfully assigned re-app-c3627a/python-flask-hello-world-6bcd64c6d6-2gwjc to minikube",
+        "kubelet - Pulling: Pulling image \"ghcr.io/amitisvoranu/demo-app/python-flask-hello-world:re-app-c3627a\"",
+        "kubelet - Pulled: Successfully pulled image \"ghcr.io/amitisvoranu/demo-app/python-flask-hello-world:re-app-c3627a\" in 2.841s (2.841s including waiting). Image size: 146042428 bytes.",
+        "kubelet - Created: Created container python-flask-hello-world",
+        "kubelet - Started: Started container python-flask-hello-world"
+      ],
+      "containers": [
+        {
+          "name": "python-flask-hello-world",
+          "image": "ghcr.io/amitisvoranu/demo-app/python-flask-hello-world:re-app-c3627a",
+          "state": {
+            "running": {
+              "started_at": "2024-10-31T10:11:55Z"
+            },
+            "terminated": null,
+            "waiting": null
+          },
+          "restarts": 0,
+          "logs": [
+            " * Debug mode: off",
+            "\u001b[31m\u001b[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.\u001b[0m",
+            " * Running on all addresses (0.0.0.0)",
+            " * Running on http://127.0.0.1:5000",
+            " * Running on http://10.244.0.172:5000",
+            "\u001b[33mPress CTRL+C to quit\u001b[0m",
+            ""
+          ]
+        }
+      ],
+      "init_containers": []
+    },
+    {
+      "name": "spring-boot-helloworld-8685d4d5d-wkrv6",
+      "app_name": "spring-boot-helloworld",
+      "phase": "Running",
+      "condition_type": "PodReadyToStartContainers",
+      "events": [
+        "default-scheduler - Scheduled: Successfully assigned re-app-c3627a/spring-boot-helloworld-8685d4d5d-wkrv6 to minikube",
+        "kubelet - Pulling: Pulling image \"ghcr.io/amitisvoranu/demo-app/spring-boot-helloworld:re-app-c3627a\"",
+        "kubelet - Pulled: Successfully pulled image \"ghcr.io/amitisvoranu/demo-app/spring-boot-helloworld:re-app-c3627a\" in 21.87s (24.692s including waiting). Image size: 502970488 bytes.",
+        "kubelet - Created: Created container spring-boot-helloworld",
+        "kubelet - Started: Started container spring-boot-helloworld",
+        "kubelet - Pulled: Successfully pulled image \"ghcr.io/amitisvoranu/demo-app/spring-boot-helloworld:re-app-c3627a\" in 814ms (814ms including waiting). Image size: 502970488 bytes."
+      ],
+      "containers": [
+        {
+          "name": "spring-boot-helloworld",
+          "image": "ghcr.io/amitisvoranu/demo-app/spring-boot-helloworld:re-app-c3627a",
+          "state": {
+            "running": {
+              "started_at": "2024-10-31T10:12:41Z"
+            },
+            "terminated": null,
+            "waiting": null
+          },
+          "restarts": 1,
+          "logs": [
+            "",
+            "  .   ____          _            __ _ _",
+            " /\\\\ / ___'_ __ _ _(_)_ __  __ _ \\ \\ \\ \\",
+            "( ( )\\___ | '_ | '_| | '_ \\/ _` | \\ \\ \\ \\",
+            " \\\\/  ___)| |_)| | | | | || (_| |  ) ) ) )",
+            "  '  |____| .__|_| |_|_| |_\\__, | / / / /",
+            " =========|_|==============|___/=/_/_/_/",
+            " :: Spring Boot ::                (v3.0.0)",
+            "",
+            "2024-10-31T10:12:28.286Z  INFO 1 --- [           main] com.neo.Application                      : Starting Application v1.0.0-SNAPSHOT using Java 17.0.13 with PID 1 (/spring-boot-helloworld-1.0.0-SNAPSHOT.jar started by root in /)",
+            "2024-10-31T10:12:28.302Z  INFO 1 --- [           main] com.neo.Application                      : No active profile set, falling back to 1 default profile: \"default\"",
+            "2024-10-31T10:12:39.800Z  WARN 1 --- [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server",
+            "2024-10-31T10:12:39.977Z  INFO 1 --- [           main] .s.b.a.l.ConditionEvaluationReportLogger : ",
+            "",
+            "Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.",
+            "2024-10-31T10:12:40.106Z ERROR 1 --- [           main] o.s.boot.SpringApplication               : Application run failed",
+            "",
+            "org.springframework.context.ApplicationContextException: Unable to start web server",
+            "\tat org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:164) ~[spring-boot-3.0.0.jar!/:3.0.0]",
+            "\tat org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:578) ~[spring-context-6.0.2.jar!/:6.0.2]",
+            "\tat org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.0.0.jar!/:3.0.0]",
+            "\tat org.springframework.boot.SpringApplication.refresh(SpringApplication.java:730) ~[spring-boot-3.0.0.jar!/:3.0.0]",
+            "\tat org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:432) ~[spring-boot-3.0.0.jar!/:3.0.0]",
+            "\tat org.springframework.boot.SpringApplication.run(SpringApplication.java:308) ~[spring-boot-3.0.0.jar!/:3.0.0]",
+            "\tat org.springframework.boot.SpringApplication.run(SpringApplication.java:1302) ~[spring-boot-3.0.0.jar!/:3.0.0]",
+            "\tat org.springframework.boot.SpringApplication.run(SpringApplication.java:1291) ~[spring-boot-3.0.0.jar!/:3.0.0]",
+            "\tat com.neo.Application.main(Application.java:10) ~[classes!/:1.0.0-SNAPSHOT]",
+            "\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]",
+            "\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]",
+            "\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]",
+            "\tat java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]",
+            "\tat org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49) ~[spring-boot-helloworld-1.0.0-SNAPSHOT.jar:1.0.0-SNAPSHOT]",
+            "\tat org.springframework.boot.loader.Launcher.launch(Launcher.java:95) ~[spring-boot-helloworld-1.0.0-SNAPSHOT.jar:1.0.0-SNAPSHOT]",
+            "\tat org.springframework.boot.loader.Launcher.launch(Launcher.java:58) ~[spring-boot-helloworld-1.0.0-SNAPSHOT.jar:1.0.0-SNAPSHOT]",
+            "\tat org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:65) ~[spring-boot-helloworld-1.0.0-SNAPSHOT.jar:1.0.0-SNAPSHOT]",
+            "Caused by: org.springframework.boot.web.server.WebServerException: Unable to create tempDir. java.io.tmpdir is set to /tmp",
+            "\tat org.springframework.boot.web.server.AbstractConfigurableWebServerFactory.createTempDir(AbstractConfigurableWebServerFactory.java:208) ~[spring-boot-3.0.0.jar!/:3.0.0]",
+            "\tat org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:194) ~[spring-boot-3.0.0.jar!/:3.0.0]",
+            "\tat org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:183) ~[spring-boot-3.0.0.jar!/:3.0.0]",
+            "\tat org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:161) ~[spring-boot-3.0.0.jar!/:3.0.0]",
+            "\t... 16 common frames omitted",
+            "Caused by: java.nio.file.FileSystemException: /tmp/tomcat.8080.11717972724003615619: Read-only file system",
+            "\tat java.base/sun.nio.fs.UnixException.translateToIOException(UnixException.java:100) ~[na:na]",
+            "\tat java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106) ~[na:na]",
+            "\tat java.base/sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111) ~[na:na]",
+            "\tat java.base/sun.nio.fs.UnixFileSystemProvider.createDirectory(UnixFileSystemProvider.java:397) ~[na:na]",
+            "\tat java.base/java.nio.file.Files.createDirectory(Files.java:700) ~[na:na]",
+            "\tat java.base/java.nio.file.TempFileHelper.create(TempFileHelper.java:134) ~[na:na]",
+            "\tat java.base/java.nio.file.TempFileHelper.createTempDirectory(TempFileHelper.java:171) ~[na:na]",
+            "\tat java.base/java.nio.file.Files.createTempDirectory(Files.java:1017) ~[na:na]",
+            "\tat org.springframework.boot.web.server.AbstractConfigurableWebServerFactory.createTempDir(AbstractConfigurableWebServerFactory.java:202) ~[spring-boot-3.0.0.jar!/:3.0.0]",
+            "\t... 19 common frames omitted",
+            "",
+            ""
+          ]
+        }
+      ],
+      "init_containers": []
+    }
+  ],
+  "exception": null,
+  "start": 76650.201941732,
+  "end": 76702.009789763
+}
