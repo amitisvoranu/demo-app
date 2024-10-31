@@ -46,6 +46,12 @@ spec:
             cpu: 1000m
         securityContext:
           readOnlyRootFilesystem: true
+        volumeMounts:
+        - mountPath: /tmp
+          name: tmp-volume
+      volumes:
+      - name: tmp-volume
+        emptyDir: {}
       imagePullSecrets:
       - name: pull-secret
       restartPolicy: Always
