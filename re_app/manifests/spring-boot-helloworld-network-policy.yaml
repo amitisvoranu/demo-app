@@ -1,0 +1,15 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: spring-boot-helloworld-network-policy
+spec:
+  podSelector:
+    matchLabels:
+      app.kubernetes.io/name: spring-boot-helloworld
+  policyTypes:
+  - Ingress
+  - Egress
+  ingress:
+  - from: []
+  egress:
+  - to: []

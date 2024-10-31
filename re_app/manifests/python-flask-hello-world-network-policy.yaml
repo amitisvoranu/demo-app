@@ -1,0 +1,15 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: python-flask-hello-world-network-policy
+spec:
+  podSelector:
+    matchLabels:
+      app.kubernetes.io/name: python-flask-hello-world
+  policyTypes:
+  - Ingress
+  - Egress
+  ingress:
+  - from: []
+  egress:
+  - to: []
