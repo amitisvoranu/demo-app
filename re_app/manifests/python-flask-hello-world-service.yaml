@@ -12,5 +12,5 @@ spec:
   selector:
     app.kubernetes.io/name: python-flask-hello-world
     app.kubernetes.io/part-of: demo-app
-  type: ClusterIP
+  type: LoadBalancer
 status: {}

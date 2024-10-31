@@ -44,6 +44,8 @@ spec:
           limits:
             memory: 256Mi
             cpu: 500m
+      securityContext:
+        readOnlyRootFilesystem: true
       imagePullSecrets:
       - name: pull-secret
       restartPolicy: Always
